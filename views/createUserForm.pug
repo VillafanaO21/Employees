@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    form(action='/add' method='post')
+        label(for='firstname') First Name
+        input(id='firstname' name='firstname' type='text')
+
+        label(for='lastname') Last Name
+        input(id='lastname' name='lastname' type='text')
+
+        label(for='jobtitle') Job Title
+        select(id='jobtitle' name='jobtitle' type='text')
+            each title in jobtitles
+                option(value=title) #{title}
+
+        div.adress

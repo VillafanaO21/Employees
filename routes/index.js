@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
+const employeeController = require('../controllers/employeeController')
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get('/', employeeController.displayEmployee)
 
 module.exports = router;

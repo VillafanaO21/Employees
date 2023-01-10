@@ -2,7 +2,7 @@
   "development": {
     "username": "villafana_rhsb",
     "password": "violet11Crown",
-    "database": "villafana_rhsn_db",
+    "database": "villafana_rhsb_db",
     "host": "web-applications.caj7agbzaqsl.us-west-1.rds.amazonaws.com",
     "dialect": "postgres"
   },
