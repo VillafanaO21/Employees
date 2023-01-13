@@ -8,4 +8,5 @@ router.get('/add', employeeController.renderAddEmployeeForm);
 router.get('/add', employeeController.addEmployee);
 router.get('/update/:id', employeeController.renderUpdateForm);
 router.post('/update/:id', employeeController.updateEmployee);
+router.get('/delete/:id', employeeController.deleteEmployee);
 module.exports = router;

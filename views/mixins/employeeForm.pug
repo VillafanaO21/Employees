@@ -1,18 +1,21 @@
 mixin employeeForm(url, employee, jobtitles, stateslist)
 
-    form(action=url method='post')
-        label(for='firstname') First Name:
-        input(id='firstname' name='firstname' type='text' value=employee.firstname)
+    form.employee-form(action=url method='post')
+        div.name-row
+            div.first
+                label(for='firstname') First Name:
+                input(id='firstname' name='firstname' type='text' value=employee.firstname)
+            div.last
 
-        label(for='lastname') Last Name:
-        input(id='lastname' name='lastname' type='text' value=employee.lastname)
+                label(for='lastname') Last Name:
+                input(id='lastname' name='lastname' type='text' value=employee.lastname)
 
-        label(for='jobtitle') Job Title:
-        select(id='jobtitle' name='jobtitle')
-            each title in jobtitles
-                option(value=title selected=employee.jobtitle===title) #{title}
+                label(for='jobtitle') Job Title:
+            select(id='jobtitle' name='jobtitle')
+                each title in jobtitles
+                    option(value=title selected=employee.jobtitle===title) #{title}
 
-        div.adress
+        div.address
             div.streetline
                 div.streeline1
                     label(for='streetline1') Street Line 1
@@ -45,4 +48,8 @@ mixin employeeForm(url, employee, jobtitles, stateslist)
                 label(for='yearhired') Year Hired:
                 input(id='yearhired' name='yearhired' type='number' value=employee.yearhired)
 
-        button(type='submit') Submit
+            div.form-buttons
+                a.button.cancel(href='/') Cancel
+                if employee.id
+                    a.button.delete(href=`/delete/${employee.id}`) Delete Employee
+                button.button.submit(type='submit') Submit
