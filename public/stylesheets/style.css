@@ -60,6 +60,7 @@ tr:nth-child(2n) td{
   max-width: 1300px;
   margin-left: auto;
   margin-right:auto;
+  background-color: #1F2937;
 }
 
 .actions{
@@ -75,6 +76,7 @@ tr:nth-child(2n) td{
 .form-button{
   display:flex;
   justify-content: space-between;
+  color: #115E59;
 }
 .button{
   text-decoration: none;
@@ -97,15 +99,18 @@ tr:nth-child(2n) td{
   color: #1E283B;
 }
 .employee-form{
-  background:white;
+  background-color: mintcream;
   border-radius: 12px;
   padding: 20px;
   max-width: 750px;
+  font-family: "Times New Roman";
 }
 .employee-form label{
   display:block;
   font-weight:bold;
   color: #71717A;
+  font-size: small;
+  font-family: "Times New Roman";
 }
 .employee-form input {
   padding: 4px 8px;
@@ -139,4 +144,7 @@ tr:nth-child(2n) td{
 }
 .first{
   margin-right: 16px;
+}
+.salary{
+  display: flex;
 }
